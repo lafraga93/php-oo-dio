@@ -2,9 +2,9 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-use App\ContaBancaria;
+use App\ContasTipo\ContaPoupanca;
 
-$conta = new ContaBancaria(
+$conta = new ContaPoupanca(
     'Banco do Brasil', // banco
     'Gustavo Fraga', // nomeTitular
     '8244', // numeroAgencia

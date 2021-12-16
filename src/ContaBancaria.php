@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace App;
 
-class ContaBancaria
+abstract class ContaBancaria
 {
-    private string $banco;
-    private string $nomeTitular;
-    private string $numeroAgencia;
-    private string $numeroConta;
-    private float $saldo;
+    protected string $banco;
+    protected string $nomeTitular;
+    protected string $numeroAgencia;
+    protected string $numeroConta;
+    protected float $saldo;
 
     public function __construct(
         string $banco,
@@ -29,19 +29,16 @@ class ContaBancaria
     public function depositar(float $valor): string
     {
         $this->saldo += $valor;
-        return 'Depósito de R$ ' . number_format($valor, 2, ',', '') . ' realizado';
+        return 'Depósito de R$ ' . $valor . ' realizado';
     }
 
     public function sacar(float $valor): string
     {
         $this->saldo -= $valor;
-        return 'Saque de R$ ' . number_format($valor, 2, ',', '') . ' realizado';
+        return 'Saque de R$ ' . $valor . ' realizado';
     }
 
-    public function obterSaldo(): string
-    {
-        return 'Seu saldo atual é: R$ ' . number_format($this->saldo, 2, ',', '');
-    }
+    public abstract function obterSaldo(): string;
 
     public function getBanco(): string
     {
