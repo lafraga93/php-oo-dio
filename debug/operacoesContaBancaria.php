@@ -12,4 +12,17 @@ $conta = new ContaBancaria(
     0 // saldo
 );
 
-var_dump($conta->exibirDadosDaConta());
+echo $conta->obterSaldo();
+echo PHP_EOL;
+
+echo $conta->depositar(50);
+echo PHP_EOL;
+
+echo $conta->obterSaldo();
+echo PHP_EOL;
+
+echo $conta->sacar(30);
+echo PHP_EOL;
+
+echo $conta->obterSaldo();
+echo PHP_EOL;

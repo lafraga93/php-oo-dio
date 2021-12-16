@@ -4,4 +4,4 @@
 `composer dump-autoload`
 
 ##### Executando o projeto através do CLI do PHP
-`php debug/objetoContaBancaria.php`
+`php debug/operacoesContaBancaria.php`
