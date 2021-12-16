@@ -5,4 +5,5 @@
 
 ##### Executando o projeto através do CLI do PHP
 `php debug/operacoesContaCorrente.php`
+
 `php debug/operacoesContaPoupanca.php`
