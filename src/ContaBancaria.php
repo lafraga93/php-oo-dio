@@ -29,13 +29,13 @@ abstract class ContaBancaria
     public function depositar(float $valor): string
     {
         $this->saldo += $valor;
-        return 'Depósito de R$ ' . $valor . ' realizado';
+        return 'Depósito de R$ ' . number_format($valor, 2, ',', '') . ' realizado';
     }
 
     public function sacar(float $valor): string
     {
         $this->saldo -= $valor;
-        return 'Saque de R$ ' . $valor . ' realizado';
+        return 'Saque de R$ ' . number_format($valor, 2, ',', '') . ' realizado';
     }
 
     public abstract function obterSaldo(): string;
